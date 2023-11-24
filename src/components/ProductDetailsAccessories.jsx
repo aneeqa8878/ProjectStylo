@@ -2,9 +2,9 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { accessories } from "./AccessoriesData";
 import { toast } from "react-toastify";
-import { connect } from 'react-redux';
+
 import { useSelector,useDispatch } from 'react-redux'
-import { addToCart } from "../redux/actions/cartActions";
+
 
 
 
@@ -22,9 +22,7 @@ function ProductDetailsAccessories() {
     }
     //setDress(dress+1)
   };
-  const cart = () => {
-    dispatch(addToCart(product));
-  };
+  
 
   const subtract = () => {
     if (count <= 10) {
@@ -42,8 +40,8 @@ function ProductDetailsAccessories() {
   useEffect(() => {
     const data = accessories.filter((selected) => selected.id == params.id);
    // setProduct(data[0]);
-   dispatch(fetchSingleData(id))
-  }, [dispatch]);
+   dispatch()
+  }, []);
   return (
     <div>
       <div className="container mt-2">
@@ -76,7 +74,7 @@ function ProductDetailsAccessories() {
               <button className="btn btn-primary mx-3 my-3" onClick={subtract}>
                 -
               </button>
-              <button type="button" class="button" onClick={()=>cart()}>
+              <button type="button" class="button">
                 <b> + Add to Cart </b>
               </button>
             </div>
@@ -94,4 +92,4 @@ function ProductDetailsAccessories() {
   );
 }
 
-export default connect(null, { addToCart })(ProductDetailsAccessories);
+export default ProductDetailsAccessories;

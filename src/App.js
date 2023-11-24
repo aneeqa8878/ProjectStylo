@@ -36,6 +36,8 @@ import UpdateUser from "./components/UpdateUser";
 import "./App.css";
 import Cart from "./components/Cart";
 
+
+
 // import { useSelector,useDispatch } from "react-redux";
 
 function App() {
@@ -89,6 +91,7 @@ function App() {
         <Route path="/kids" element={<Kids />}></Route>
         <Route path="/accessories" element={<Accessories />}></Route>
         <Route path="/beauty" element={<Beauty />}></Route>
+        
 
         <Route path="/womenshoes/:id" element={<ProductDetails />}></Route>
         <Route

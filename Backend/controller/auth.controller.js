@@ -21,6 +21,14 @@ exports.store = async (req, res) => {
     console.log(err);
   }
 };
+exports.index = async (req, res) => {
+  try {
+    const users = await User.find().sort({ createdAt: -1 });
+    res.json({ status: 200, message: "Data Fetched Successfully", users });
+  } catch (err) {
+    console.log(err);
+  }
+};
 
 exports.login = async (req, res) => {
   try {

@@ -5,7 +5,7 @@ function Users() {
   const [users, setUsers] = useState([]);
 
   const getUser = async () => {
-    const response = await axios.get("http://localhost:8000/users");
+    const response = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/auth`);
     setUsers(response.data.users);
   };
   useEffect(() => {

@@ -1,6 +1,18 @@
 body{
     overflow-x: hidden;
 }
+/* Default styles for larger screens */
+.someElement {
+    width: 50%;
+  }
+  
+  /* Media query for smaller screens */
+  @media (max-width: 768px) {
+    .someElement {
+      width: 100%;
+    }
+  }
+  
 .blink {
     animation: blinker 1.5s linear infinite;
     color: #dd3675;

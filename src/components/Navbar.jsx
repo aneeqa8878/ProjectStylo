@@ -4,95 +4,80 @@ import { Link } from "react-router-dom";
 
 function Navbar() {
   return (
-    <div class="row">
-      <div class="col  text-center">
-        <Link class="" to="/">
-          <img
-            src="https://stylo.pk/cdn/shop/files/Logo-200X100_6f449994-79a7-467d-95c6-ac0903ba695d_140x.png?v=1646139171"
-            width={100}
-            height={60}
-          />
-        </Link>
-
-        <div className="navbar-nav flex-row-reverse bd-highlight pb-1">
-          <Link  class="me-4 text-reset" to ="/contactus">
-            <i class="fas fa-envelope mx-1 fa-2x"></i>
-          </Link>
-
-          <Link  class="me-4 text-reset" to ="/contactus">
-            <i class="fas fa-phone mx-1 fa-2x"></i>
-          </Link>
-          <Link  class="me-4 text-reset" to ="/contactus">
-            <i class="fas fa-map-marker-alt mx-1 fa-2x" />
+    <div className="container-fluid">
+      <div className="row align-items-center justify-content-between">
+        <div className="col text-center">
+          <Link to="/">
+            <img
+              src="https://stylo.pk/cdn/shop/files/Logo-200X100_6f449994-79a7-467d-95c6-ac0903ba695d_140x.png?v=1646139171"
+              width={100}
+              height={60}
+              alt="Logo"
+            />
           </Link>
         </div>
+        <div className="col-auto">
+          <div className="navbar-nav flex-row-reverse bd-highlight pb-1">
+            <Link className="me-4 text-reset" to="/contactus">
+              <i className="fas fa-envelope mx-1 fa-2x"></i>
+            </Link>
+            <Link className="me-4 text-reset" to="/contactus">
+              <i className="fas fa-phone mx-1 fa-2x"></i>
+            </Link>
+            <Link className="me-4 text-reset" to="/contactus">
+              <i className="fas fa-map-marker-alt mx-1 fa-2x" />
+            </Link>
+          </div>
+        </div>
       </div>
-      <hr></hr>
+      <hr />
 
-      <nav class="navbar navbar-expand-lg navbar-light bg-white">
-        <div class="container-fluid">
-          <div
-            class="collapse navbar-collapse justify-content-center"
-            id="navbarCenteredExample"
+      <nav className="navbar navbar-expand-lg bg-body-white">
+        <div className="container-fluid pl-4 gap-4">
+          <Link className="navbar-brand" to="/sale">
+            Sale
+          </Link>
+          <button
+            className="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
           >
-            <ul class="navbar-nav mb-2 mb-lg-0 gap-3">
-              <li class="nav-item">
-              <Link
-                  className="nav-link active sale-link" // Added class 'sale-link'
-                  aria-current="page"
-                  to="/sale"
-                >
-                  <b>Sale</b>
-                </Link>
-              </li>
-              <li class="nav-item">
-                <Link class="nav-link" to="/womenshoes">
-                  <b>Women Shoes</b>
-                </Link>
-              </li>
-              <li class="nav-item">
-                <Link class="nav-link" to="/womenapparels">
-                  <b>Women Apparels</b>
-                </Link>
-              </li>
-              <li class="nav-item">
-                <Link class="nav-link" to="/bags">
-                  <b>Bags</b>
-                </Link>
-              </li>
-              <li class="nav-item">
-                <Link class="nav-link" to="/kids">
-                  <b>Kids</b>
-                </Link>
-              </li>
-              <li class="nav-item">
-                <Link class="nav-link" to="/accessories">
-                  <b>Accessories</b>
-                </Link>
-              </li>
-              <li class="nav-item">
-                <Link class="nav-link" to="/beauty">
-                  <b>Beauty</b>
-                </Link>
-              </li>
-              <li class="nav-item">
-                <Link class="nav-link" to="/contactus">
-                  <b>Contact Us</b>
-                </Link>
-              </li>
-              <li class="nav-item">
-                <Link class="nav-link" to="/login">
-                  <b>Login</b>
-                </Link>
-                
-              </li>
-              <li class="nav-item">
-                <Link class="nav-link" to="/signup">
-                  <b>Signup</b>
-                </Link>
-                
-              </li>
-            </ul>
+            <span className="navbar-toggler-icon"></span>
+          </button>
+          <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div className="navbar-nav">
+              <Link className="nav-link active" to="/womenshoes">
+                <b>Women Shoes</b>
+              </Link>
+              <Link className="nav-link" to="/womenapparels">
+                <b>Women Apparels</b>
+              </Link>
+              <Link className="nav-link" to="/bags">
+                <b>Bags</b>
+              </Link>
+              <Link className="nav-link" to="/kids">
+                <b>Kids</b>
+              </Link>
+              <Link className="nav-link" to="/accessories">
+                <b>Accessories</b>
+              </Link>
+              <Link className="nav-link" to="/beauty">
+                <b>Beauty</b>
+              </Link>
+              <Link className="nav-link" to="/contactus">
+                <b>Contact Us</b>
+              </Link>
+              <Link className="nav-link" to="/login">
+                <b>Login</b>
+              </Link>
+              <Link className="nav-link" to="/signup">
+                <b>Signup</b>
+              </Link>
+            </div>
           </div>
         </div>
       </nav>
