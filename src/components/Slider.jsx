@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Link } from "react-router-dom";
@@ -13,10 +13,6 @@ import "swiper/css/navigation";
 // import required modules
 import { Autoplay, Navigation } from "swiper/modules";
 import { Pagination } from "swiper/modules";
-import WomenShoes from './WomenShoes';
-import WomenApparels from './WomenApparels';
-import Accessories from './Accessories';
-import Beauty from './Beauty';
 
 function Slider() {
   return (

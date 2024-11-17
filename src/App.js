@@ -1,4 +1,4 @@
-import React,{useState} from "react";
+import React, { useState } from "react";
 import Cards from "./components/Cards";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
@@ -36,17 +36,7 @@ import UpdateUser from "./components/UpdateUser";
 import "./App.css";
 import Cart from "./components/Cart";
 
-
-
-// import { useSelector,useDispatch } from "react-redux";
-
 function App() {
-  //const count =useSelector((state)=>state.count)
-  //const dispatch =useDispatch()
-  // const [token, setToken] = useState();
-  //if(!token) {
-   //return <Login setToken={setToken} />
-  //}
   const currentPath = window.location.pathname;
 
   return (
@@ -91,7 +81,6 @@ function App() {
         <Route path="/kids" element={<Kids />}></Route>
         <Route path="/accessories" element={<Accessories />}></Route>
         <Route path="/beauty" element={<Beauty />}></Route>
-        
 
         <Route path="/womenshoes/:id" element={<ProductDetails />}></Route>
         <Route
@@ -107,7 +96,7 @@ function App() {
         ></Route>
         <Route path="/beauty/:id" element={<ProductDetailsBeauty />}></Route>
         <Route path="/contactus" element={<ContactUs />}></Route>
-        
+
         <Route path="/cart" element={<Cart />}></Route>
       </Routes>
 

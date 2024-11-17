@@ -5,7 +5,7 @@ function Users() {
   const [users, setUsers] = useState([]);
 
   const getUser = async () => {
-    const response = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/auth`);
+    const response = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/users`);
     setUsers(response.data.users);
   };
   useEffect(() => {
@@ -20,7 +20,7 @@ function Users() {
             <th scope="col">Name</th>
             <th scope="col">Email</th>
             <th scope="col">Password</th>
-            <th scope="col">Confirm Password</th>
+            
           </tr>
         </thead>
         <tbody>

@@ -32,9 +32,9 @@ function Navbar() {
       </div>
       <hr />
 
-      <nav className="navbar navbar-expand-lg bg-body-white">
-        <div className="container-fluid pl-4 gap-4">
-          <Link className="navbar-brand" to="/sale">
+      <nav className="navbar navbar-expand-lg bg-body-white ">
+        <div className="container-fluid ">
+          <Link className="navbar-brand" style={{color:'red'}} to="/sale">
             Sale
           </Link>
           <button

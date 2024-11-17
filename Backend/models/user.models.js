@@ -3,8 +3,8 @@ const userSchema=mongoose.Schema({
   
     name:{type:String,default:""},
     email:{type:String,default:""},
-    subject:{type:String,default:""},
-    message:{type:String,default:""},
+    password:{type:String,default:""},
+
     isActive:{type:Boolean, default:false}
 },
 
